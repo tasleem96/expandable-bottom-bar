@@ -158,7 +158,7 @@ class _BottomExpandableAppBarState extends State<BottomExpandableAppBar> {
                     height: panelState * finalHeight + widget.appBarHeight + widget.bottomOffset + viewPadding.vertical,
                     decoration: widget.expandedDecoration ??
                         BoxDecoration(
-                          color: widget.expandedBackColor ?? Theme.of(context).backgroundColor,
+                          color: widget.expandedBackColor ?? Theme.of(context).scaffoldBackgroundColor,
                           borderRadius: BorderRadius.circular(25),
                         ),
                     child: Opacity(opacity: panelState > 0.25 ? 1 : panelState * 4, child: widget.expandedBody),
@@ -168,7 +168,7 @@ class _BottomExpandableAppBarState extends State<BottomExpandableAppBar> {
             ),
             ClipPath(
               child: Container(
-                color: widget.bottomAppBarColor ?? Theme.of(context).bottomAppBarColor,
+                color: widget.bottomAppBarColor ?? Theme.of(context).bottomNavigationBarTheme.backgroundColor,
                 height: widget.appBarHeight + viewPadding.vertical,
                 child: Padding(
                   padding: viewPadding,

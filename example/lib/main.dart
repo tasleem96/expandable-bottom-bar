@@ -29,7 +29,7 @@ class ExamplePage extends StatelessWidget {
       extendBody: true,
       appBar: AppBar(
         title: Text("Panel Showcase"),
-        backgroundColor: Theme.of(context).bottomAppBarColor,
+        backgroundColor: Theme.of(context).bottomAppBarTheme.color,
       ),
       //
       // Lets use docked FAB for handling state of sheet
@@ -83,7 +83,7 @@ class ExamplePage extends StatelessWidget {
       bottomNavigationBar: BottomExpandableAppBar(
         horizontalMargin: 16,
         shape: AutomaticNotchedShape(RoundedRectangleBorder(), StadiumBorder(side: BorderSide())),
-        expandedBackColor: Theme.of(context).backgroundColor,
+        expandedBackColor: Theme.of(context).navigationBarTheme.backgroundColor,
         expandedBody: Center(
           child: Text("Hello world!"),
         ),
@@ -117,7 +117,7 @@ class ExamplePage extends StatelessWidget {
           crossAxisCount: 2,
         ),
         itemBuilder: (context, index) => Card(
-          color: Theme.of(context).bottomAppBarColor,
+          color: Theme.of(context).bottomAppBarTheme.color,
           child: Text(
             index.toString(),
           ),
